@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:orientation="horizontal">
+       <Button
+           android:id="@+id/choice_city_button"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:text="天津"
+           android:layout_marginLeft="0dp"
+           android:paddingRight="0dp"
+           android:paddingLeft="0dp"
+           android:gravity="center"
+           android:textSize="13sp"
+           android:drawableRight="@mipmap/more_unfold"
+           android:drawablePadding="2dp"
+           style="?android:attr/borderlessButtonStyle"
+           android:background="@color/varyWhite"
+           android:textAlignment="textEnd"
+           tools:ignore="RtlCompat"
+           />
+       <Button
+           android:id="@+id/search_movie_button"
+           android:layout_width="0dp"
+           android:layout_weight="4"
+           android:layout_height="match_parent"
+           android:text="电影/电视剧"
+           android:drawableLeft="@drawable/ic_search"
+           android:drawablePadding="10dp"
+           android:background="@drawable/btn_gray_shape"
+           android:gravity="center"
+           android:layout_marginLeft="2dp"
+           android:paddingLeft="90dp"
+           android:textAlignment="textStart"
+           tools:ignore="RtlCompat" />
+
+   </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/splitline"
+        />-
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/varyWhite">
+        <Button
+            android:id="@+id/now_popular_show_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="正在热映"/>
+
+
+        <Button
+            android:id="@+id/soon_show_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="?android:attr/borderlessButtonStyle"
+
+            android:text="即将上映"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/tx1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:background="@color/colorBlack"
+            android:visibility="invisible"/>
+
+        <View
+            android:id="@+id/tx2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:background="@color/colorBlack"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/splitline"
+        />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/now_popular_show_fragment"
+            android:name="com.example.chl.myapplication.Now_popular_fragemnt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <fragment
+            android:id="@+id/soon_show_fragment"
+            android:name="com.example.chl.myapplication.SoonShowFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13">
+
+        <fragment
+            android:id="@+id/Main_popular_fragment"
+            android:name="com.example.chl.myapplication.MainPopularShowFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/search_movie_button"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:text="热门榜单"
+            android:drawableLeft="@mipmap/hottop"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="2dp"
+            android:paddingLeft="135dp"
+            android:textAlignment="textStart"
+            android:onClick="hottop"
+            android:background="@drawable/btn_gray_shape"
+            tools:ignore="RtlCompat" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
